@@ -29,6 +29,10 @@ Created by user: MauritzMaj
 
 https://github.com/MauritzMaj/NoteTaker
 
+Link to deployed app: https://tranquil-retreat-95902.herokuapp.com/
+
 screenshot of application:
+
+<img width="954" alt="image" src="https://user-images.githubusercontent.com/105758175/215805920-547b6625-2d2c-4381-aa26-5e5d2d21bf65.png">
 
 
