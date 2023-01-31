@@ -15,6 +15,7 @@ const PORT = process.env.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+
 //set static 'public' folder
 app.use(express.static('public'));
 
@@ -28,10 +29,7 @@ app.get('/notes', (req, res) =>
 res.sendFile(path.join(__dirname, "./public/notes.html"))
 );
 
-//set wildcard route
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "./public/index.html"));
-});
+
 
 //set route to GET request and read from db.json
 app.get('/api/notes', (req, res) => {
@@ -77,6 +75,12 @@ app.delete('/api/notes/:id', (req, res) => {
         res.json(`Note ${noteid} has been deleted`);
       });
 });
+
+//set wildcard route
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./public/index.html"));
+});
+
 //Have app listen on specified port
 app.listen(PORT, () =>
   console.log(`App listening at http://localhost:${PORT} 🚀`)
